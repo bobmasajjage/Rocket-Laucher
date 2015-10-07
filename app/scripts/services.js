@@ -1,5 +1,5 @@
 
-'use strict'
+'use strict';
 
 var rocketService = angular.module('Rocket', []);
 
@@ -22,7 +22,7 @@ rocketService.factory('rocketService', [ '$http', '$q',  function($http, $q) {
 			}
 		});
 	};
-	
+
 	return self;
 
 }])

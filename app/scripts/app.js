@@ -1,11 +1,22 @@
 'use strict';
 
 /**
- * @ngdoc overview
  * @name rocketLaunchApp
  * @description
  * # rocketLaunchApp
- *
- * Main module of the application.
  */
-angular.module('rocketLaunchApp', ['ngRoute', 'rocketLaunchControllers']);
+var rocket = angular.module('rocketLaunchApp', ['ngRoute', 'rocketLaunchControllers']);
+
+rocket.config(['$routeProvider','$locationProvider', 
+    function($routeProvider, $locationProvider){
+        $routeProvider
+        .when("/",{
+            templateUrl:"views/main.html",
+            controller:"launchCTRL",
+            controllerAs:"mainCtrl"
+        })
+        .otherwise({
+            redirectTo:"/"
+        })
+    }]);
+
