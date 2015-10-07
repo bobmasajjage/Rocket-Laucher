@@ -8,5 +8,4 @@
  *
  * Main module of the application.
  */
-angular
-  .module('rocketLaunchApp', []);
+angular.module('rocketLaunchApp', ['ngRoute', 'rocketLaunchControllers']);
