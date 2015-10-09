@@ -5,22 +5,19 @@
  * Controller of the rocketLaunchApp
 **/
 
-
 var rocketApp = angular.module('rocketLaunchControllers', ['Rocket']);
 
-rocketApp.controller('launchCTRL', ['$q', 'rocketService', function($q, rocketService) {
+rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', function($q, rocketService, $scope) {
 
-	var self = this;
-	self.launches = {};
+	var promise = rocketService.loadData();
 
-	rocketService.getLaunches().then(function(data){
-		self.launches = data;
-		console.log(self.launches);
+	promise.then(function(response)	{
+		$scope.launches = response.data.launches;
+		console.log($scope.launches);
 
-	}, function(response) {
-		console.log('couldnot fetch data error : ', response)
-
+	}, function(data) {
+		console.log("Something went wrong: ", err);
 	});
 
-	console.log(self.launches);
+
 }]);

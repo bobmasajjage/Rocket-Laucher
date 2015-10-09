@@ -3,21 +3,18 @@
 
 var rocketService = angular.module('Rocket', []);
 
-rocketService.factory("rocketService", ['$http', '$q', function ($http, $q) {
+rocketService.service("rocketService", ['$http', '$q', function ($http, $q) {
+	var self = this; 
 
-	var self = this;
+	var defered = $q.defer();
 
-    self.getLaunches = function () {
-        var deferred = $q.defer();
+	$http.get('launchschedule.json').then(function(data) {
 
-        $http.get("/launchschedule.json")
-            .then(function (response) {
-                deferred.resolve(response.data);
-            },
-            function (resone) {
-                deferred.reject(response.data);
-            });
-        return deferred.promise;
-    };
-    return self
+		defered.resolve(data);
+	});
+
+	self.loadData = function() {
+
+		return defered.promise;
+	};
 }]);
