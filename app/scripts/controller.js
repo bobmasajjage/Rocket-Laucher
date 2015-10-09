@@ -11,19 +11,16 @@ var rocketApp = angular.module('rocketLaunchControllers', ['Rocket']);
 rocketApp.controller('launchCTRL', ['$q', 'rocketService', function($q, rocketService) {
 
 	var self = this;
-	var launches = {};
+	self.launches = {};
 
-	rocketService.getData()
-	.then(function(data) {
+	rocketService.getLaunches().then(function(data){
+		self.launches = data;
+		console.log(self.launches);
 
-		self.launches = data.items;
-		console.log('Response Data: ', data.items)
+	}, function(response) {
+		console.log('couldnot fetch data error : ', response)
 
-	},
-	function(err) {
-		var errMsg = err.error.message;
-		console.log("Loading data failed with Error: ", errMsg);
 	});
 
-
+	console.log(self.launches);
 }]);
