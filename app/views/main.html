@@ -1,8 +1,24 @@
 
 
-<div class="main-content" ng-repeat="rocket in launches">
-  <ul>
-    <li>{{rocket.launch_site}}</li>
-  </ul>
-  
+<!-- To Do the view from here for the JSON FILE -->
+
+<div class="main-wrapper">
+        <div class="content" ng-repeat="rocket in launches">
+        <!-- rockets headers -->
+            <hgroup>
+                <h2>{{rocket.mission}}</h2>
+                <h3>{{rocket.vehicle}}</h3>
+            </hgroup>
+            <div class="body-content">
+                <!-- content and rockets body should go here -->
+                <small class="time-left">
+                    Lauch in {{rocket.launch_date}}
+                </small>
+                <p>{{rocket.description}}</p>
+                <p class="launch-site">{{rocket.launch_site}}</p>
+                <small>
+                    {{rocket.gmt_date | date: 'MMMM EEEE d y h:mm:ss Z'}}
+                </small>
+            </div>
+        </div>
 </div>
