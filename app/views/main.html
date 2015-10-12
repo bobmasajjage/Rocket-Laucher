@@ -15,7 +15,9 @@
                     Lauch in {{rocket.launch_date}}
                 </small>
                 <p>{{rocket.description}}</p>
-                <p class="launch-site">{{rocket.launch_site}}</p>
+                <a ng-href="https://en.wikipedia.org/wiki/{{rocket.wiki_link}}" class="launch-site">
+                    {{rocket.launch_site}}
+                </a>
                 <small>
                     {{rocket.gmt_date | date: 'MMMM EEEE d y h:mm:ss Z'}}
                 </small>
