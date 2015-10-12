@@ -7,7 +7,7 @@
 
 var rocketApp = angular.module('rocketLaunchControllers', ['Rocket']);
 
-rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', function($q, rocketService, $scope) {
+rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	 function($q, rocketService, $scope, $moment) {
 
 	var promise = rocketService.loadData();
 
@@ -16,8 +16,28 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', function($q
 		var data = response.data.launches;
 
 		data.forEach(function(dt)	{
-			dt.gmt_date = new Date(dt.gmt_date);
 
+			var now = new Date();
+			var then =  new Date(dt.gmt_date);
+
+			var m_now = $moment(now);
+			var m_then = $moment(then);
+
+
+			var diff = $moment(m_then).unix() - $moment(m_now).unix();
+
+			dt.launch_t = $moment.unix(diff);
+
+			//Debug
+			// console.log('days', time.days());
+			// console.log(time.hours());
+			// console.log(time.minutes());
+			// console.log(time.seconds());
+
+			dt.gmt_date = then;
+
+			dt.time = $moment.utc(dt.gmt_date).fromNow();
+			console.log($scope.time);
 			var link = dt.launch_site;
 
          // create a new property on the rocketLaunch object 
@@ -41,7 +61,6 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', function($q
 
 			// assign the new link now to the launch object wiki_link
 			dt.wiki_link = link;
-			console.log(dt.wiki_link);
 		});
 
         // set the data return from the promise to the controller

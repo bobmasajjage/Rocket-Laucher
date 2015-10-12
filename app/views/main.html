@@ -9,15 +9,19 @@
                 <h2>{{rocket.mission}}</h2>
                 <h3>{{rocket.vehicle}}</h3>
             </hgroup>
+
             <div class="body-content">
                 <!-- content and rockets body should go here -->
                 <small class="time-left">
-                    Lauch in {{rocket.launch_date}}
+                    Lauchs in {{rocket.launch_t.days() + ' day (s) ' + ', ' + rocket.launch_t.hours() + ' hours ' + ', '+ rocket.launch_t.minutes() + ' minutes' }}
                 </small>
+
                 <p>{{rocket.description}}</p>
+
                 <a ng-href="https://en.wikipedia.org/wiki/{{rocket.wiki_link}}" class="launch-site">
                     {{rocket.launch_site}}
                 </a>
+
                 <small>
                     {{rocket.gmt_date | date: 'MMMM EEEE d y h:mm:ss Z'}}
                 </small>
