@@ -23,18 +23,18 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 			var m_now = $moment(now);
 			var m_then = $moment(then);
 
-
-			var diff = $moment(m_then).unix() - $moment(m_now).unix();
+			var diff = $moment(m_now).unix() - $moment(m_then).unix();
 
 			dt.launch_t = $moment.unix(diff);
 
 			//Debug
-			// console.log('days', time.days());
-			// console.log(time.hours());
-			// console.log(time.minutes());
-			// console.log(time.seconds());
+			console.log('days', dt.launch_t.days());
+			console.log(dt.launch_t.hours());
+			console.log(dt.launch_t.minutes());
+			console.log(dt.launch_t.seconds());
 
 			dt.gmt_date = then;
+			console.log(dt.gmt_date);
 
 			// dt.time = $moment.utc(dt.gmt_date).fromNow();
 			var link = dt.launch_site;

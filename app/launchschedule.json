@@ -2,49 +2,22 @@
     "copyright": "Data from http://spaceflightnow.com/ via Fair Use",
     "launches": [
         {
-            "description": "A Chinese Long March 2D rocket will launch the Jilin 1 mission, China\u2019s first commercial high-resolution Earth observation satellite. The mission consists of four satellites for high-definition imagery, video observations and technology demonstrations. [Oct. 3]",
-            "gmt_date": "2015-10-07 04:10:00+00:00",
-            "launch_date": "Oct. 7",
-            "launch_site": "Jiuquan, China",
-            "launch_window": "0410 GMT (12:10 a.m. EDT)",
-            "mission": "Jilin 1",
-            "vehicle": "Long March 2D"
-        },
-        {
-            "description": "A United Launch Alliance Atlas 5 rocket, designated AV-058, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 401 vehicle configuration with a four-meter fairing, no solid rocket boosters and a single-engine Centaur upper stage. Delayed from Aug. 27 and Sept. 25. [Sept. 9]",
-            "gmt_date": "2015-10-08 12:00:00+00:00",
-            "launch_date": "Oct. 8",
-            "launch_site": "SLC-3E, Vandenberg Air Force Base, California",
-            "launch_window": "1200-1600 GMT (8 a.m.-12 p.m. EDT; 5-9 a.m. PDT)",
-            "mission": "NROL-55",
-            "vehicle": "Atlas 5"
-        },
-        {
-            "description": "An International Launch Services Proton rocket with a Breeze M upper stage will deploy the Turksat 4B communications satellite. Delayed from June 2014 and early 2015. Delayed from June 30 and Oct. 5. [Sept. 29]",
-            "gmt_date": "2015-10-13 20:45:00+00:00",
-            "launch_date": "Oct. 13",
+            "description": "An International Launch Services Proton rocket with a Breeze M upper stage will deploy the Turksat 4B communications satellite. Delayed from June 2014 and early 2015. Delayed from June 30, Oct. 5 and Oct. 13. [Oct. 11]",
+            "gmt_date": "2015-10-16 20:40:00+00:00",
+            "launch_date": "Oct. 16",
             "launch_site": "Baikonur Cosmodrome, Kazakhstan",
-            "launch_window": "2045 GMT (4:45 p.m. EDT)",
+            "launch_window": "2040 GMT (4:40 p.m. EDT)",
             "mission": "Turksat 4B",
             "vehicle": "Proton"
         },
         {
-            "description": "A Chinese Long March 3B rocket will launch the Apstar 9 communications satellite. Pastor 9 will provide commercial video broadcast, VSAT connectivity and cellular backhaul services over the Asia-Pacific and Southeast Asia for APT Satellite. [Oct. 3]",
+            "description": "A Chinese Long March 3B rocket will launch the Apstar 9 communications satellite. Apstar 9 will provide commercial video broadcast, VSAT connectivity and cellular backhaul services over the Asia-Pacific and Southeast Asia for APT Satellite. [Oct. 3]",
             "gmt_date": null,
             "launch_date": "October",
             "launch_site": "Xichang, China",
             "launch_window": "TBD",
             "mission": "Apstar 9",
             "vehicle": "Long March 3B"
-        },
-        {
-            "description": "A Russian government Proton rocket with a Breeze M upper stage will deploy the Garpun communications satellite into orbit for the Russian military. Delayed from May 19. [May 8]",
-            "gmt_date": null,
-            "launch_date": "TBD",
-            "launch_site": "Baikonur Cosmodrome, Kazakhstan",
-            "launch_window": "TBD",
-            "mission": "Garpun",
-            "vehicle": "Proton"
         },
         {
             "description": "A Super Strypi launch vehicle will deliver the HiakaSat spacecraft and multiple CubeSat payloads into orbit. The Super Strypi is a rocket developed by Sandia National Laboratories with assistance from the University of Hawaii, Aerojet and the U.S. Defense Department. Delayed from October 2013, April and October 2014. Delayed from January 2015. [Aug. 17]",
@@ -65,6 +38,15 @@
             "vehicle": "Atlas 5"
         },
         {
+            "description": "A Russian government Proton rocket with a Breeze M upper stage will deploy the Garpun communications satellite into orbit for the Russian military. Delayed from May 19. [May 8]",
+            "gmt_date": null,
+            "launch_date": "TBD",
+            "launch_site": "Baikonur Cosmodrome, Kazakhstan",
+            "launch_window": "TBD",
+            "mission": "Garpun",
+            "vehicle": "Proton"
+        },
+        {
             "description": "A Russian government Soyuz 2-1v rocket with a Volga upper stage will launch with Kanopus ST Earth observation satellite. Delayed from Feb. 1. [July 18]",
             "gmt_date": null,
             "launch_date": "TBD",
@@ -81,6 +63,15 @@
             "launch_window": "2134-2217 GMT (4:34-5:17 p.m. EST)",
             "mission": "Badr 7 & GSAT 15",
             "vehicle": "Ariane 5"
+        },
+        {
+            "description": "A Chinese Long March 3B rocket will launch the LaoSat 1 communications satellite. LaoSat 1 will provide telecommunications and broadcast services for Laos and Southeast Asia. [Oct. 11]",
+            "gmt_date": null,
+            "launch_date": "November",
+            "launch_site": "Xichang, China",
+            "launch_window": "TBD",
+            "mission": "LaoSat 1",
+            "vehicle": "Long March 3B"
         },
         {
             "description": "A SpaceX Falcon 9 rocket will launch the SES 9 communications satellite. Owned by SES of Luxembourg, the spacecraft will provide direct-to-home and other communications services over Northeast Asia, South Asia and Indonesia, as well as maritime communications for vessels in the Indian Ocean. Delayed from July 15 and August. [Sept. 17]",
@@ -110,11 +101,11 @@
             "vehicle": "H-2A"
         },
         {
-            "description": "A European Vega rocket, designated VV06, will launch with the European Space Agency\u2019s LISA Pathfinder mission. LISA Pathfinder will test the concept of gravitational wave detection from the L1 Lagrangian point between the Earth and sun. Delayed from July, Oct. 2 and Nov. 27. [Oct. 3]",
+            "description": "A European Vega rocket, designated VV06, will launch with the European Space Agency\u2019s LISA Pathfinder mission. LISA Pathfinder will test the concept of gravitational wave detection from the L1 Lagrangian point between the Earth and sun. Delayed from July, Oct. 2 and Nov. 27. [Oct. 11]",
             "gmt_date": null,
             "launch_date": "Dec. 1/2",
             "launch_site": "ZLV, Kourou, French Guiana",
-            "launch_window": "0445 GMT on 2nd (11:45 p.m. EST on 2nd)",
+            "launch_window": "0415 GMT on 2nd (11:15 p.m. EST on 2nd)",
             "mission": "LISA Pathfinder",
             "vehicle": "Vega"
         },
@@ -173,11 +164,11 @@
             "vehicle": "Soyuz"
         },
         {
-            "description": "An Arianespace Soyuz rocket, designated VS13, will launch on a mission from the Guiana Space Center in South America. The Soyuz will carry two Galileo full operational capability satellites for Europe\u2019s Galileo navigation constellation. The Soyuz 2-1b (Soyuz ST-B) rocket will use a Fregat-MT upper stage. [Aug. 20]",
-            "gmt_date": "2015-12-17 00:00:00+00:00",
+            "description": "An Arianespace Soyuz rocket, designated VS13, will launch on a mission from the Guiana Space Center in South America. The Soyuz will carry two Galileo full operational capability satellites for Europe\u2019s Galileo navigation constellation. The Soyuz 2-1b (Soyuz ST-B) rocket will use a Fregat-MT upper stage. [Oct. 11]",
+            "gmt_date": "2015-12-17 11:51:00+00:00",
             "launch_date": "Dec. 17",
             "launch_site": "ELS, Sinnamary, French Guiana",
-            "launch_window": "TBD",
+            "launch_window": "1151:55 GMT (6:51:55 a.m. EST)",
             "mission": "Galileo 11 & 12",
             "vehicle": "Soyuz"
         },
@@ -191,7 +182,7 @@
             "vehicle": "Falcon 9"
         },
         {
-            "description": "A SpaceX Falcon 9 rocket will launch the Jason 3 ocean altimetry mission. Jason 3 will measure ocean surface topography to aid in ocean circulation and climate change research for NOAA, EUMETSAT, NASA and the French space agency, CNES. Delayed from March 31 and July 22. [Sept. 17",
+            "description": "A SpaceX Falcon 9 rocket will launch the Jason 3 ocean altimetry mission. Jason 3 will measure ocean surface topography to aid in ocean circulation and climate change research for NOAA, EUMETSAT, NASA and the French space agency, CNES. Delayed from March 31 and July 22. [Sept. 17]",
             "gmt_date": null,
             "launch_date": "December",
             "launch_site": "SLC-4E, Vandenberg Air Force Base, California",
@@ -528,6 +519,6 @@
             "vehicle": "Antares"
         }
     ],
-    "update_time": "2015-10-06 15:01:02.025724",
+    "update_time": "2015-10-13 11:01:01.589575",
     "url": "http://spaceflightnow.com/launch-schedule/"
 }
