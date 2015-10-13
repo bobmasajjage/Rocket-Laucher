@@ -17,31 +17,27 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 
 		data.forEach(function(dt)	{
 
-			console.log('Starting Debug');
-			console.log('..........');
-
 			var test_date = $moment(dt.gmt_date);
 			dt.string_gmt_date = test_date._d.toString();
+
+			if (dt.string_gmt_date === 'Invalid Date') {
+				dt.string_gmt_date = false;
+			};
 
 			// this works the same as the code above
 			// dt.string_gmt_date = test_date._d + '';
 			// 'co-harsing'
 
 
-			console.log(test_date);
+			console.log(test_date.fromNow());
 
 			// //Debug
-			// console.log('days', dt.launch_t.days());
-			// console.log(dt.launch_t.hours());
-			// console.log(dt.launch_t.minutes());
-			// console.log(dt.launch_t.seconds());
 
-			console.log('string version', test_date._d.toString());
 
 			// dt.time = $moment.utc(dt.gmt_date).fromNow();
 			var link = dt.launch_site;
 
-         // create a new property on the rocketLaunch object 
+         	// create a new property on the rocketLaunch object 
 			dt.wiki_link = '';
 
 			link  = link.split(',');
