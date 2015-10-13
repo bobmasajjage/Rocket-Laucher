@@ -17,24 +17,26 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 
 		data.forEach(function(dt)	{
 
-			var now = new Date();
-			var then =  new Date(dt.gmt_date);
+			console.log('Starting Debug');
+			console.log('..........');
 
-			var m_now = $moment(now);
-			var m_then = $moment(then);
+			var test_date = $moment(dt.gmt_date);
+			dt.string_gmt_date = test_date._d.toString();
 
-			var diff = $moment(m_now).unix() - $moment(m_then).unix();
+			// this works the same as the code above
+			// dt.string_gmt_date = test_date._d + '';
+			// 'co-harsing'
 
-			dt.launch_t = $moment.unix(diff);
 
-			//Debug
-			console.log('days', dt.launch_t.days());
-			console.log(dt.launch_t.hours());
-			console.log(dt.launch_t.minutes());
-			console.log(dt.launch_t.seconds());
+			console.log(test_date);
 
-			dt.gmt_date = then;
-			console.log(dt.gmt_date);
+			// //Debug
+			// console.log('days', dt.launch_t.days());
+			// console.log(dt.launch_t.hours());
+			// console.log(dt.launch_t.minutes());
+			// console.log(dt.launch_t.seconds());
+
+			console.log('string version', test_date._d.toString());
 
 			// dt.time = $moment.utc(dt.gmt_date).fromNow();
 			var link = dt.launch_site;
