@@ -17,22 +17,46 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 
 		data.forEach(function(dt)	{
 
-			var test_date = $moment(dt.gmt_date);
-			dt.string_gmt_date = test_date._d.toString();
+			// this works the same as the code above
+			// dt.string_gmt_date = test_date._d + '';
+			// 'co-harsing'
+			// //Debug
+
+			console.log('starting........');
+
+			var now = new Date();
+			var then = new Date(dt.gmt_date);
+
+			var diffYear = (then.getMonth() - now.getMonth()) + ' ';
+
+			if ( diffYear.charAt(0) === '-') {
+				console.log('Before: ', then);
+				then.setYear(2016);
+				console.log('After": ', then);
+			};
+
+			var now_moment =  $moment(now);
+			var then_moment =  $moment(then);
+
+			// var launch_date = $moment(dt.gmt_date);
+			dt.string_gmt_date = then_moment._d.toString();
 
 			if (dt.string_gmt_date === 'Invalid Date') {
 				dt.string_gmt_date = false;
 			};
 
-			// this works the same as the code above
-			// dt.string_gmt_date = test_date._d + '';
-			// 'co-harsing'
+
+			$scope.launcher_date = then_moment;
+
+			if ( then_moment.fromNow() === "Invalid date") {
+				dt.from_now = false;
+			} else {
+				dt.from_now = then_moment.fromNow();
+			};
 
 
-			console.log(test_date.fromNow());
-
-			// //Debug
-
+			var result = now_moment.from(then_moment);
+			console.log(result);
 			// dt.time = $moment.utc(dt.gmt_date).fromNow();
 			var link = dt.launch_site;
 
@@ -67,3 +91,18 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 	});
 
 }]);
+
+
+
+
+var now = new Date();
+var then = new Date('2015-03-10 00:00:00+00:00');
+
+var diffYear = (then.getMonth() - now.getMonth()) + ' ';
+
+if ( diffYear.charAt(0) === '-') {
+	then.setYear(2016)
+	console.log(then);
+}
+
+console.log(diffYear);

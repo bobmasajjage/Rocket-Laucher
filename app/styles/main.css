@@ -110,10 +110,9 @@ body {
 a.launch-site{
   text-decoration: none;
   display: block;
-
 }
 
-a.launch-site:hover {
+a.launch-site:hover { 
   font-weight: bold;
   font-style: none;
 }
@@ -122,4 +121,9 @@ a.launch-site:hover {
   margin-top: 6px;
   color: #295084;
 
+}
+
+
+.content:last-child {
+  border: none;
 }
