@@ -53,10 +53,7 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 			} else {
 				dt.from_now = then_moment.fromNow();
 			};
-
-
-			var result = now_moment.from(then_moment);
-			console.log(result);
+			
 			// dt.time = $moment.utc(dt.gmt_date).fromNow();
 			var link = dt.launch_site;
 
