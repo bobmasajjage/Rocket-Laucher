@@ -7,6 +7,8 @@
 
 body {
   padding: 0;
+  font-family: 'Arimo', sans-serif;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -64,10 +66,60 @@ body {
   }
 }
 
+.content {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c9c9c9;
+}
 
 .main-wrapper {
   max-width: 600px;
+  min-width: 300px;
   margin: 0 auto;
-  padding-top: 5em;
+  padding-top: 3em;
 }
 
+.content hgroup h1 {
+  margin-bottom: 4px;
+  color: #295084;
+  font-weight: bold;
+  font-size: 2em;
+
+}
+.content hgroup h2 {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 6px;
+  color: #4d4d4d;
+  font-weight: bold;
+  font-size: 1.5em;
+
+}
+
+.time-left {
+  color: green;
+  font-size: 110%;
+}
+
+.launch-site {
+  color: #333;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+a.launch-site{
+  text-decoration: none;
+  display: block;
+
+}
+
+a.launch-site:hover {
+  font-weight: bold;
+  font-style: none;
+}
+
+.launch-date {
+  margin-top: 6px;
+  color: #295084;
+
+}

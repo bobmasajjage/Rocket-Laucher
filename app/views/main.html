@@ -6,14 +6,14 @@
         <div class="content" ng-repeat="rocket in launches">
         <!-- rockets headers -->
             <hgroup>
-                <h1>{{rocket.mission}}</h2>
-                <h2>{{rocket.vehicle}}</h3>
+                <h1>{{rocket.mission}}</h1>
+                <h2>{{rocket.vehicle}}</h2>
             </hgroup>
 
             <div class="body-content">
                 <!-- content and rockets body should go here -->
                 <small class="time-left">
-                    Launch in {{rocket.launch_t.days() + ' day ' + ', ' + rocket.launch_t.hours() + ' hours ' + ', '+ rocket.launch_t.minutes() + ' minutes' }}
+                    Launch in {{rocket.launch_t.days() + ', ' + rocket.launch_t.hours() + ' hours ' + ', '+ rocket.launch_t.minutes() + ' minutes' }}
                 </small>
 
                 <p>{{rocket.description}}</p>
@@ -22,7 +22,7 @@
                     {{rocket.launch_site}}
                 </a>
 
-                <small ng-if="rocket.string_gmt_date" class="lauch-date">
+                <small ng-if="rocket.string_gmt_date" class="launch-date">
                     {{rocket.string_gmt_date}}
                 </small>
             </div>
