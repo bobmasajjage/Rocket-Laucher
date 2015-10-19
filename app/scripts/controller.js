@@ -40,14 +40,13 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 
             // returns the number of days left to launch
 			var getDays = function () { 
+				var days = duration.asDays();
+				var day_string = days.toString();
+				var dot = day_string.indexOf('.');
+				var new_day = parseInt(day_string.slice(0, dot));
+				console.log(new_day);
 
-				var days = duration.days();
-				if ( days === 1 || days === 0 ) {
-					return days + ' day';
-				} else {
-					return days + ' days';
-				}
-
+				return new_day === 0 || new_day === 1 ? new_day + ' day, ' : new_day+ ' days, ';
 			};
 
 			// returns hours left to launch
@@ -55,9 +54,9 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 
 				var hours = duration.hours();
 				if ( hours === 1 || hours === 0 ) {
-					return hours + ' hour';
+					return hours + ' hour,';
 				} else {
-					return hours + ' hours';
+					return hours + ' hours,';
 				}
 
 			};
@@ -80,11 +79,8 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 				dt.string_gmt_date = false;
 			};
 
-
-			$scope.launcher_date = then_moment;
-
-			if ( then_moment.fromNow() === "Invalid date") {
-				dt.InvalidDate = true;
+			if ( dt.gmt_date === null) {
+				dt.invalidDate = true;
 			} else {
 				dt.launch_days = getDays();
 				dt.launch_hours = getHours();
