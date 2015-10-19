@@ -22,8 +22,6 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 			// 'co-harsing'
 			// //Debug
 
-			console.log('starting........');
-
 			var now = new Date();
 			var then = new Date(dt.gmt_date);
 
@@ -35,10 +33,47 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 				console.log('After": ', then);
 			};
 
-			var now_moment =  $moment(now);
-			var then_moment =  $moment(then);
+			var now_moment =  $moment(now); // initializa a moment object of the time now
+			var then_moment =  $moment(then); // intialize a moment object of the launch time
 
-			// var launch_date = $moment(dt.gmt_date);
+			var duration = $moment.duration(then_moment.diff(now_moment));
+
+            // returns the number of days left to launch
+			var getDays = function () { 
+
+				var days = duration.days();
+				if ( days === 1 || days === 0 ) {
+					return days + ' day';
+				} else {
+					return days + ' days';
+				}
+
+			};
+
+			// returns hours left to launch
+			var getHours = function () { 
+
+				var hours = duration.hours();
+				if ( hours === 1 || hours === 0 ) {
+					return hours + ' hour';
+				} else {
+					return hours + ' hours';
+				}
+
+			};
+
+			 // returns minutes left to launch
+			var getMinutes = function () { 
+
+				var minutes = duration.minutes();
+				if ( minutes === 1 || minutes === 0 ) {
+					return minutes + ' minute';
+				} else {
+					return minutes + ' minutes';
+				}
+
+			};
+
 			dt.string_gmt_date = then_moment._d.toString();
 
 			if (dt.string_gmt_date === 'Invalid Date') {
@@ -49,12 +84,13 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 			$scope.launcher_date = then_moment;
 
 			if ( then_moment.fromNow() === "Invalid date") {
-				dt.from_now = false;
+				dt.InvalidDate = true;
 			} else {
-				dt.from_now = then_moment.fromNow();
+				dt.launch_days = getDays();
+				dt.launch_hours = getHours();
+				dt.launch_minutes = getMinutes();
 			};
-			
-			// dt.time = $moment.utc(dt.gmt_date).fromNow();
+
 			var link = dt.launch_site;
 
          	// create a new property on the rocketLaunch object 
@@ -88,18 +124,3 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 	});
 
 }]);
-
-
-
-
-var now = new Date();
-var then = new Date('2015-03-10 00:00:00+00:00');
-
-var diffYear = (then.getMonth() - now.getMonth()) + ' ';
-
-if ( diffYear.charAt(0) === '-') {
-	then.setYear(2016)
-	console.log(then);
-}
-
-console.log(diffYear);

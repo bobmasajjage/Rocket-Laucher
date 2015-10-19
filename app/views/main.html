@@ -12,8 +12,8 @@
 
             <div class="body-content">
                 <!-- content and rockets body should go here -->
-                <small class="time-left" ng-if="rocket.from_now">
-                    Launch {{rocket.from_now }}
+                <small class="time-left" ng-if="!rocket.launchDate">
+                    Launch in {{rocket.launch_days}}, {{rocket.launch_hours}}, {{rocket.launch_minutes}}
                 </small>
 
                 <p>{{rocket.description}}</p>
