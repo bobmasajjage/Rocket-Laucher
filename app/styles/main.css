@@ -127,3 +127,9 @@ a.launch-site:hover {
 .content:last-child {
   border: none;
 }
+
+.navbar-brand {
+  font-size: 2.345em;
+  font-weight: bold;
+  font-family: 'Arimo';
+}

@@ -12,7 +12,7 @@
 
             <div class="body-content">
                 <!-- content and rockets body should go here -->
-                <small class="time-left" ng-hide="rocket.invalidDate">
+                <small class="time-left" ng-show="!rocket.invalidDate">
                 <span>Launch in </span>
                 {{rocket.launch_days}} {{rocket.launch_hours}} {{rocket.launch_minutes}}
                 </small>

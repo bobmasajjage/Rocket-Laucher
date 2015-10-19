@@ -22,6 +22,11 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 			// 'co-harsing'
 			// //Debug
 
+
+			if (dt.gmt_date === null) {
+				dt.invalidDate = true;
+			};
+
 			var now = new Date();
 			var then = new Date(dt.gmt_date);
 
@@ -47,6 +52,10 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 				console.log(new_day);
 
 				return new_day === 0 || new_day === 1 ? new_day + ' day, ' : new_day+ ' days, ';
+			};
+
+			if ( getDays === 'NaN days' || getDays === 'NaN day') {
+				dt.invalidDate = true;
 			};
 
 			// returns hours left to launch
