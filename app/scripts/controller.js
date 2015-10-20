@@ -17,7 +17,6 @@ rocketApp.controller('launchCTRL', ['$q', 'rocketService', '$scope', '$moment',	
 
 		data.forEach(function(dt)	{
 
-			// this works the same as the code above
 			// dt.string_gmt_date = test_date._d + '';
 			// 'co-harsing'
 			// //Debug
